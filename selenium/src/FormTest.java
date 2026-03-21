@@ -13,7 +13,9 @@ public class FormTest {
 
         WebDriver driver = new ChromeDriver();
 
-        driver.get("file:///C://Users//ANUSHRI//Desktop//DevOps-CA2-task//form//index.html");
+        driver.get(
+            "file:///C:/ProgramData/Jenkins/.jenkins/workspace/DevOps-CA2/form/index.html"
+            );
 
         driver.findElement(By.id("name")).sendKeys("Anushri");
 

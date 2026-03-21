@@ -6,12 +6,14 @@ public class FormTest {
 
     public static void main(String[] args) {
 
-        System.setProperty("webdriver.chrome.driver",
-        "C:\\chromedriver\\chromedriver.exe");
+        System.setProperty(
+            "webdriver.chrome.driver",
+            "C:\\chromedriver\\chromedriver.exe"
+            );
 
         WebDriver driver = new ChromeDriver();
 
-        driver.get("file:///C:/Users/ANUSHRI/DevOps-CA2-task/form/index.html");
+        driver.get("file:///C://Users//ANUSHRI//Desktop//DevOps-CA2-task//form//index.html");
 
         driver.findElement(By.id("name")).sendKeys("Anushri");
 

@@ -5,7 +5,8 @@ pipeline {
 
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/anushriadapawar/DevOps-CA2-task.git'
+                git branch: 'main',
+                    url: 'https://github.com/anushriadapawar/DevOps-CA2-task.git'
             }
         }
 
@@ -29,7 +30,7 @@ pipeline {
 
     post {
         success {
-            echo 'Build SUCCESS - Form tested successfully'
+            echo 'Build SUCCESS'
         }
 
         failure {

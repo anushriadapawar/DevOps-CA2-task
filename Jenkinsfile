@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    environment {
+        JAVA_HOME = "C:\\Program Files\\Java\\jdk-21"
+        PATH = "${JAVA_HOME}\\bin;${env.PATH}"
+    }
+
     stages {
 
         stage('Clone Repository') {
@@ -13,6 +18,7 @@ pipeline {
         stage('Compile Java') {
             steps {
                 bat '''
+                javac -version
                 javac -cp "selenium/lib/*;selenium/lib/libs/*" selenium/src/FormTest.java
                 '''
             }
@@ -21,6 +27,7 @@ pipeline {
         stage('Run Selenium Test') {
             steps {
                 bat '''
+                java -version
                 java -cp "selenium/src;selenium/lib/*;selenium/lib/libs/*" FormTest
                 '''
             }
